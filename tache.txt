@@ -1,0 +1,5 @@
+faire apparaitre un message qd on accepte les cookies pr verifier que c'est accepté
+// si non, il redirige vers la page d'accueil avec une erreur 403
+
+faire la page connexion
+recap de l'inscription par mail apres avoir validé l'insciption
