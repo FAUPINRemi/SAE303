@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <form action="" method="post">
+  <form action="traitement-reservation.php" method="post">
   <h1>Réservation</h1>
 
     <fieldset>
