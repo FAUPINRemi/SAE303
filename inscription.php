@@ -15,7 +15,7 @@
   
 
     <div id="ins">
-        <form class="box" action="" method="post">
+        <form class="box" action="traitement.php" method="post">
             <!-- formulaire inscription -->
             <h1>INSCRIPTION</h1>
 

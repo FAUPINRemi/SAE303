@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <form action="traitement.php" method="post">
+  <form action="traitement-reservation.php" method="post">
   <h1>Réservation</h1>
 
     <fieldset>
@@ -20,6 +20,8 @@
         </br>
 
         <label>Activités :</label>
+        </br>
+
         <input type="checkbox" id="vol_initiation" name="activites[]" value="vol_initiation">
         <label for="vol_initiation">Vol d'initiation</label>
         </br>
