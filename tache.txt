@@ -1,4 +1,4 @@
 
 ajouté choix multiple des activités
 faire la page connexion
-recap de l'inscription par mail apres avoir validé l'insciption
+recap de l'inscription par mail apres avoir validé l'inscription
