@@ -30,8 +30,6 @@ if (isset($_POST['cookie'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, init-ial-scale=1.0">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Licorice&family=Roboto:wght@500&family=Satisfy&family=Shadows+Into+Light&family=Vujahday+Script&display=swap');</style>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Baskerville:ital@1&family=Licorice&family=Roboto:wght@500&family=Satisfy&family=Shadows+Into+Light&family=Vujahday+Script&display=swap');</style>
     <link rel="stylesheet" href="" type="text/css">
     <title>Connexion</title>
 </head>
