@@ -19,17 +19,17 @@
 
             <fieldset class="Civilité">
                 <legend>Civilité</legend>
-                <label for="civilite1">Homme</label>
+                <label for="civilite">Homme</label>
                 <input type="radio" id="civilite1" name="civilite" value="Homme"/>
-                <label for="civilite1">Femme</label>
+                <label for="civilite">Femme</label>
                 <input type="radio" id="civilite2" name="civilite" value="femme"/>
             </fieldset>
 
             <fieldset class="NomPrenomDate">
-                <label for="user_name1">Nom :</label>
+                <label for="user_name">Nom :</label>
                 <input type="text" name="user_name1" id="user_name1" placeholder="Nom" required>
 
-                <label for="user_name2">Prénom :</label>
+                <label for="user_firstname">Prénom :</label>
                 <input type="text" name="user_name2" id="user_name2" placeholder="Prénom" required>
 
                 <label for="user_date">Date de naissance :</label>
@@ -43,7 +43,7 @@
                 <label>Nom de rue</label>
                 <input id="rue" name="rue" placeholder="Nom de rue" type="text" /><br />
                 <label>Code postal</label>
-                <input id="code-postal" name="code-postal" placeholder="Code postal" type="text" /><br />
+                <input id="codePostal" name="codePostal" placeholder="Code postal" type="text" /><br />
                 <label>Ville</label>
                 <input id="ville" name="ville" placeholder="Ville" type="text" />
             </fieldset>

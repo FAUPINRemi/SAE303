@@ -2,12 +2,12 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
     $civilite = $_POST["civilite"];
-    $nom = $_POST["user_name1"];
-    $prenom = $_POST["user_name2"];
+    $nom = $_POST["user_name"];
+    $prenom = $_POST["user_firstname"];
     $dateNaissance = $_POST["user_date"];
     $numRue = $_POST["numRue"];
     $rue = $_POST["rue"];
-    $codePostal = $_POST["code-postal"];
+    $codePostal = $_POST["codePostal"];
     $ville = $_POST["ville"];
     $situationFamiliale = $_POST["situationFamiliale"];
     $dateDebut = $_POST["dateDebut"];
