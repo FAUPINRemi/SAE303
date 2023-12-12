@@ -19,3 +19,16 @@ CREATE TABLE Utilisateurs (
     telephone VARCHAR(15) NOT NULL,
     date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+
+CREATE TABLE Reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    vol_initiation BOOLEAN,
+    cours_pilotage BOOLEAN,
+    balade_aerienne BOOLEAN,
+    formation_pilote BOOLEAN,
+    date_reservation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
