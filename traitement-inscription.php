@@ -1,9 +1,36 @@
+
+
+
 <?php
+/* use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php'; */
+
+// Paramètres de connexion à la base de données
+$db_host = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "acf2l";
+
+// Connexion à la base de données
+try {
+    $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
+    // Configuration de PDO pour afficher les erreurs
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données : " . $e->getMessage();
+    die();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
     $civilite = $_POST["civilite"];
-    $nom = $_POST["user_name"];
-    $prenom = $_POST["user_firstname"];
+    $user_name = $_POST["user_name"];
+    $user_firstname = $_POST["user_firstname"];
     $dateNaissance = $_POST["user_date"];
     $numRue = $_POST["numRue"];
     $rue = $_POST["rue"];
@@ -19,31 +46,69 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["user_email"];
     $phone = $_POST["phone"];
 
-    // Construction du corps du mail
-    $message = "Civilité: $civilite\n";
-    $message .= "Nom: $nom\n";
-    $message .= "Prénom: $prenom\n";
-    $message .= "Date de naissance: $dateNaissance\n";
-    $message .= "Adresse: $numRue $rue, $codePostal $ville\n";
-    $message .= "Situation familiale: $situationFamiliale\n";
-    $message .= "Date de début: $dateDebut\n";
-    $message .= "Date de fin: $dateFin\n";
-    $message .= "Enfant mineur: $mineur\n";
-    $message .= "Enfant majeur: $majeur\n";
-    $message .= "Parent à charge: $parent\n";
-    $message .= "Cause de handicap: $handicap\n";
-    $message .= "Email: $email\n";
-    $message .= "Téléphone: $phone\n";
+    try {
+        // Requête SQL pour insérer les données dans la table appropriée
+        $sql = "INSERT INTO utilisateurs (civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, email, telephone) VALUES (:civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :email, :telephone)";
 
-    // Envoyer l'e-mail
-    $to = "acf2l@hotmail.com"; // Remplacer par notre adresse e-mail
-    $subject = "Formulaire d'inscription - Récapitulatif";
-    $headers = "From: $email";
+        // Préparation de la requête
+        $stmt = $conn->prepare($sql);
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "L'e-mail a été envoyé avec succès.";
-    } else {
-        echo "Erreur lors de l'envoi de l'e-mail.";
-    }
+        // Liaison des paramètres
+        $stmt->bindParam(':civilite', $civilite);
+        $stmt->bindParam(':nom', $user_name);
+        $stmt->bindParam(':prenom', $user_firstname);
+        $stmt->bindParam(':date_naissance', $dateNaissance);
+        $stmt->bindParam(':num_rue', $numRue);
+        $stmt->bindParam(':rue', $rue);
+        $stmt->bindParam(':code_postal', $codePostal);
+        $stmt->bindParam(':ville', $ville);
+        $stmt->bindParam(':situation_familiale', $situationFamiliale);
+        $stmt->bindParam(':date_debut', $dateDebut);
+        $stmt->bindParam(':date_fin', $dateFin);
+        $stmt->bindParam(':mineur', $mineur);
+        $stmt->bindParam(':majeur', $majeur);
+        $stmt->bindParam(':parent', $parent);
+        $stmt->bindParam(':handicap', $handicap);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':telephone', $phone);
+
+        // Exécution de la requête
+        $stmt->execute();
+
+        echo "Les données ont été insérées avec succès dans la base de données.";
+
+      /*   // Envoi de l'e-mail via SMTP Gmail
+        $mail = new PHPMailer(true);
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'votre_email@gmail.com'; // Remplacez par votre adresse Gmail
+            $mail->Password   = 'vm0t2p4sse';    // Remplacez par votre mot de passe Gmail
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            // Recipient
+            $mail->setFrom($email, $user_name);
+            $mail->addAddress('acf2l@hotmail.com'); // Adresse de destination
+
+            // Content
+            $mail->isHTML(false);  // Le contenu du message est en texte brut
+            $mail->Subject = 'Formulaire d\'inscription - Récapitulatif';
+            $mail->Body    = $message;
+
+            $mail->send();
+            echo "L'e-mail a été envoyé avec succès.";
+        } catch (Exception $e) {
+            echo "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
+        }
+        */
+    } catch (PDOException $e) {
+        echo "Erreur lors de l'insertion des données dans la base de données : " . $e->getMessage();
+    } 
 }
+
+// Fermeture de la connexion à la base de données
+$conn = null;
 ?>

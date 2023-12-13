@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,10 +33,10 @@
 
             <fieldset class="NomPrenomDate">
                 <label for="user_name">Nom :</label>
-                <input type="text" name="user_name1" id="user_name1" placeholder="Nom" required>
+                <input type="text" name="user_name" id="user_name" placeholder="Nom" required>
 
                 <label for="user_firstname">Prénom :</label>
-                <input type="text" name="user_name2" id="user_name2" placeholder="Prénom" required>
+                <input type="text" name="user_firstname" id="user_firstname" placeholder="Prénom" required>
 
                 <label for="user_date">Date de naissance :</label>
                 <input type="date" name="user_date" id="user_date" placeholder="Date de naissance" required>
@@ -114,7 +120,6 @@
                 dateFin.classList.remove("hidden");
             }
         }
-
     </script>
       
 </body>
