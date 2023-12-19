@@ -2,3 +2,5 @@
 ajouté choix multiple des activités
 faire la page connexion
 recap de l'inscription par mail apres avoir validé l'inscription
+
+api : https://openweathermap.org/api

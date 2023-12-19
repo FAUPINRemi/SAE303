@@ -2,13 +2,12 @@
 
 
 <?php
-/* use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php'; */
+
 
 // Paramètres de connexion à la base de données
 $db_host = "localhost";
@@ -77,25 +76,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "Les données ont été insérées avec succès dans la base de données.";
 
-      /*   // Envoi de l'e-mail via SMTP Gmail
+      
+        // Envoi de l'e-mail via SMTP Gmail
         $mail = new PHPMailer(true);
         try {
             // Server settings
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'votre_email@gmail.com'; // Remplacez par votre adresse Gmail
-            $mail->Password   = 'vm0t2p4sse';    // Remplacez par votre mot de passe Gmail
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
+            $mail->Username   = 'acfl52995@gmail.com'; // Remplacez par votre adresse Gmail
+            $mail->Password   = 'm0t2p4sse';    // Remplacez par votre mot de passe Gmail
+            $mail->SMTPAutoTLS = true;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port       = 465;
 
             // Recipient
             $mail->setFrom($email, $user_name);
-            $mail->addAddress('acf2l@hotmail.com'); // Adresse de destination
+            $mail->addAddress('acfl52995@gmail.com'); // Adresse de destination
 
             // Content
             $mail->isHTML(false);  // Le contenu du message est en texte brut
             $mail->Subject = 'Formulaire d\'inscription - Récapitulatif';
+            
+            // Construction du corps du message
+            $message = "Nouvelle inscription :\n";
+            $message .= "Civilite: $civilite\n";
+            $message .= "Nom: $user_name\n";
+            $message .= "Prénom: $user_firstname\n";
+
             $mail->Body    = $message;
 
             $mail->send();
@@ -103,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } catch (Exception $e) {
             echo "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
         }
-        */
+        
     } catch (PDOException $e) {
         echo "Erreur lors de l'insertion des données dans la base de données : " . $e->getMessage();
     } 

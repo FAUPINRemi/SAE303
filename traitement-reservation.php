@@ -1,4 +1,23 @@
 <?php
+
+
+// Paramètres de connexion à la base de données
+$db_host = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "acf2l";
+
+// Connexion à la base de données
+try {
+    $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
+    // Configuration de PDO pour afficher les erreurs
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données : " . $e->getMessage();
+    die();
+}
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire de réservation ULM
     $nom = $_POST["nom"];
