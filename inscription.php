@@ -25,10 +25,10 @@
 
             <fieldset class="Civilité">
                 <legend>Civilité</legend>
-                <label for="civilite">Homme</label>
-                <input type="radio" id="civilite1" name="civilite" value="Homme"/>
-                <label for="civilite">Femme</label>
-                <input type="radio" id="civilite2" name="civilite" value="femme"/>
+                <label for="civilite">Monsieur</label>
+                <input type="radio" id="civilite1" name="civilite" value="Monsieur"/>
+                <label for="civilite">Madame</label>
+                <input type="radio" id="civilite2" name="civilite" value="Madame"/>
             </fieldset>
 
             <fieldset class="NomPrenomDate">
@@ -86,6 +86,9 @@
             <label for="user_email">Email :</label>
             <input type="email" name="user_email" id="user_email" placeholder="Email" required>
 
+            <label for="user_password">Mot de passe :</label>
+            <input type="password" name="user_password" id="user_password" placeholder="Mot de passe" required>
+        
             <label for="phone">Téléphone</label>
             <input type="tel" id="phone" name="phone" placeholder="Téléphone" required/>
             

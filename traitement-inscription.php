@@ -1,13 +1,8 @@
-
-
-
 <?php
 require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-
 
 // Paramètres de connexion à la base de données
 $db_host = "localhost";
@@ -47,12 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Requête SQL pour insérer les données dans la table appropriée
-        $sql = "INSERT INTO utilisateurs (civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, email, telephone) VALUES (:civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :email, :telephone)";
+        $sql = "INSERT INTO utilisateurs (user_email, civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, telephone) VALUES (:user_email, :civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :telephone)";
 
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
 
         // Liaison des paramètres
+        $stmt->bindParam(':user_email', $email);
         $stmt->bindParam(':civilite', $civilite);
         $stmt->bindParam(':nom', $user_name);
         $stmt->bindParam(':prenom', $user_firstname);
@@ -68,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':majeur', $majeur);
         $stmt->bindParam(':parent', $parent);
         $stmt->bindParam(':handicap', $handicap);
-        $stmt->bindParam(':email', $email);
         $stmt->bindParam(':telephone', $phone);
 
         // Exécution de la requête
@@ -76,7 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "Les données ont été insérées avec succès dans la base de données.";
 
-      
         // Envoi de l'e-mail via SMTP Gmail
         $mail = new PHPMailer(true);
         try {
@@ -97,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Content
             $mail->isHTML(false);  // Le contenu du message est en texte brut
             $mail->Subject = 'Formulaire d\'inscription - Récapitulatif';
-            
+
             // Construction du corps du message
             $message = "Nouvelle inscription :\n";
             $message .= "Civilite: $civilite\n";
@@ -111,10 +105,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } catch (Exception $e) {
             echo "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
         }
-        
+
     } catch (PDOException $e) {
         echo "Erreur lors de l'insertion des données dans la base de données : " . $e->getMessage();
-    } 
+    }
 }
 
 // Fermeture de la connexion à la base de données

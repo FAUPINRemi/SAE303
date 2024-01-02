@@ -1,5 +1,5 @@
 CREATE TABLE Utilisateurs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(255) PRIMARY KEY,  -- Utilisation de l'adresse e-mail comme clé primaire
     civilite VARCHAR(10) NOT NULL,
     nom VARCHAR(255) NOT NULL,
     prenom VARCHAR(255) NOT NULL,
@@ -15,10 +15,11 @@ CREATE TABLE Utilisateurs (
     majeur INT NOT NULL,
     parent INT NOT NULL,
     handicap VARCHAR(255),
-    email VARCHAR(255) NOT NULL,
     telephone VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,  -- Ajout du champ mot de passe
     date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 
 

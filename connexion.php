@@ -1,27 +1,38 @@
 <?php
-if (isset($_POST['cookie'])) {
-    // retenir l'email de la personne connectée pendant 1 an
-    setcookie(
-        'user_email', // nom de la variable
-        $_POST['user_email'], // valeur de la variable (utilisation de $_POST au lieu de $_GET)
-        [
-            'expires' => time() + 365 * 24 * 3600, // expiration du cookie
-            'secure' => true, // sécurise le cookie
-            'httponly' => true, // sécurise le cookie
-        ]
-    );
+// Informations de connexion à la base de données (à personnaliser)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "acf2l";
 
-    // retenir le mot de passe de la personne connectée pendant 1 an
-    setcookie(
-        'user_password', // nom de la variable
-        $_POST['user_password'], // valeur de la variable (utilisation de $_POST au lieu de $_GET)
-        [
-            'expires' => time() + 365 * 24 * 3600, // expiration du cookie
-            'secure' => true, // sécurise le cookie
-            'httponly' => true, // sécurise le cookie
-        ]
-    );
+// Création de la connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérification de la connexion
+if ($conn->connect_error) {
+    die("La connexion à la base de données a échoué : " . $conn->connect_error);
 }
+
+if (isset($_POST['valider'])) {
+    // Récupération des valeurs du formulaire
+    $user_email = $_POST['user_email'];
+    $user_password = $_POST['user_password'];
+
+    // Votre requête SQL pour vérifier l'authentification
+    $sql = "SELECT * FROM votre_table_utilisateurs WHERE email='$user_email' AND password='$user_password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Utilisateur authentifié avec succès, rediriger vers la page d'accueil
+        header("Location: index.html");
+        exit(); // Assure que le script s'arrête après la redirection
+    } else {
+        echo "Identifiants incorrects";
+    }
+}
+
+// Fermeture de la connexion à la base de données
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -34,30 +45,19 @@ if (isset($_POST['cookie'])) {
     <title>Connexion</title>
 </head>
 <body>
-    
-  
-
     <div id="conn">
         <form class="box" action="" method="post">
-           
             <h1>Connexion</h1>
-           
             <input type="text" name="user_email" placeholder="Email">
             <br>
             <input type="password" name="user_password" placeholder="Mot de passe">
-            <br>            <br>
+            <br>
+            <br>
             <label for="Cookie">Souhaitez-vous l'utilisation de cookies?  </label>
             <br>
             <input type="submit" name="valider" value="valider"> 
-            
-            
-            <p>Pas encore <a href="inscription.php">inscris ?</a></p>
+            <p>Pas encore <a href="inscription.php">inscrit ?</a></p>
         </form>
-        
     </div>
-
-  
-        
-      
 </body>
 </html>
