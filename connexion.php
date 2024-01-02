@@ -19,7 +19,7 @@ if (isset($_POST['valider'])) {
     $user_password = $_POST['user_password'];
 
     // Votre requête SQL pour vérifier l'authentification
-    $sql = "SELECT * FROM votre_table_utilisateurs WHERE email='$user_email' AND password='$user_password'";
+    $sql = "SELECT * FROM utilisateurs WHERE email='$user_email' AND password='$user_password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
