@@ -33,7 +33,27 @@ if (isset($_POST['valider'])) {
 
 // Fermeture de la connexion à la base de données
 $conn->close();
+
+
+session_start();
+
+
+if(isset($_SESSION['user_id'])) {
+    
+    $userRole = getRoleByEmail($_SESSION['user_email']);
+
+    
+    if($userRole == 'admin') {
+        header("Location: indexadmin.php");
+        exit();
+    } else {
+        header("Location: indexconnecte.php");
+        exit();
+    }
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
