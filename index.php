@@ -33,7 +33,7 @@
                 </button>
                 <ul class="dropdown-menu bg-dark bg-opacity-25 container dropdown-menu-end w-100">
                     <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se connecter</a></li>
-                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">S'inscrire</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="inscription.php">S'inscrire</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
                 </ul>
@@ -93,23 +93,25 @@
     </ul>
 </div>
 <div id="sectioninfo"></div>
-<div class="container">
+<div class="container d-flex justify-content-center w-50 text-center mt-5 pt-5">
     <div class="container" id="section1">
-    <img src="./ACF2L/images/restauranticon.png" alt="iconrestaurant">
-    <h5>Restauration et hébergement</h5>
-    <p>Nous proposons de la restauration rapide sur place, un service d’hébergement pour les élèves stagiaires</p>
+        <img src="./ACF2L/images/restauranticon.png" alt="iconrestaurant" style="width: 60px; height:auto;">
+        <h5>Restauration et hébergement</h5>
+        <p class="mt-3">Nous proposons de la restauration rapide sur place, un service d’hébergement pour les élèves stagiaires</p>
     </div>
     <div class="container" id="section2">
-    <img src="./ACF2L/images/clockicon.png" alt="iconorloge">
-    <h5>Leçons d’ULM</h5>
-    <p>Nous proposons des cours pour la prise en main des ULM</p>
+        <img src="./ACF2L/images/clockicon.png" alt="iconorloge" style="width: 60px; height:auto;">
+        <h5>Leçons d’ULM</h5>
+        <p class="mt-5">Nous proposons des cours pour la prise en main des ULM</p>
     </div>
     <div class="container" id="section3">
-    <img src="./ACF2L/images/calendriericon.png" alt="iconcalendrier">
-    <h5>Bus</h5>
-    <p>Des bus sont disponibles pour se rendre sur le lieux de décolage</p>
+        <img src="./ACF2L/images/calendriericon.png" alt="iconcalendrier" style="width: 60px; height:auto;">
+        <h5>Bus</h5>
+        <p class="mt-5">Des bus sont disponibles pour se rendre sur le lieu de décollage</p>
     </div>
 </div>
+
+
 <div class="container w-50 mx-auto">
     <h4>Météo</h4>
 <iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
