@@ -155,6 +155,7 @@
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Vol découverte</h5>
   <div class="card-body">
+    <h4 class="text-center text-white">60€ - 30min</h4>
     <p class="card-text text-white text-center">Vol découverte de 30 min<br>Balade Chateau de Chantilly<br>Essence comprise <br>Possibilité de promenade à la carte </p>
     <a href="connexion.php" class="btn rounded w-50 text-white mx-auto" style="background-color:#FF5722;">Go</a>
   </div>
@@ -163,6 +164,7 @@
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Forfait initiation</h5>
   <div class="card-body">
+  <h4 class="text-center text-white">500€ - 5h de vol</h4>
     <p class="card-text text-white text-center">Pour commencer à apprendre à piloter pendant 5 vos avec un instructeur du club.<br> C’est vous qui pilotez ! <br> L’idéal pour se faire une idée</p>
     <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
@@ -171,19 +173,21 @@
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Membre</h5>
   <div class="card-body">
+  <h4 class="text-center text-white">90€ - 1h</h4>
     <p class="card-text text-white text-center">Prix pour les 10 premières heures.<br>La cotidation pour le club est de 105€.<br>Assurance comprise<br>Avoir licence FFPLUM ou FFW</p>
-    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Go</a>
+    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Vol découverte </h5>
   <div class="card-body">
-    <p class="card-text text-white text-center" style="margin-top:55px;">+10h = 75 €/h<br>
+  <h4 class="text-center text-white">64€ - 1h</h4>
+    <p class="card-text text-white text-center" >+10h = 75 €/h<br>
 +20h = 71 €/h<br>
 +30h = 67 €/h<br>
 Pour les moins de 25ans il y a une remise de 20%</p>
-    <a href="connexion" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Go</a>
+    <a href="connexion" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 </div>
