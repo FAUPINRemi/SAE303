@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if(!isset($_SESSION['user_id'])) {
+    header("Location: connexion.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
