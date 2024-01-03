@@ -35,7 +35,6 @@
                     <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se connecter</a></li>
                     <li><a class="dropdown-item text-white text-reset" href="inscription.php">S'inscrire</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
                 </ul>
             </div>
         </ul>
