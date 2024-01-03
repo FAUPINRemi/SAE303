@@ -15,26 +15,27 @@
     </button>
 
     <div class="collapse navbar-collapse text-white z-3 container" id="navbarSupportedContent">
-        <!-- Left links -->
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white p-10 ">
+  
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white p-10 nav-underline">
             <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="#">Informations</a>
+                <a class="nav-link text-white text-reset" aria-current="page" href="#sectioninfo">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Réserver</a>
+                <a class="nav-link text-white text-reset" href="#">Réserver</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contact</a>
+                <a class="nav-link text-white text-reset" href="#">Contact</a>
             </li>
-            <!-- Navbar dropdown -->
+         
             <div class="btn-group">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img style="width: 40px; height: 40px;" src="./ACF2L/images/Log_white_icon.png" alt="logicon">
                 </button>
-                <ul class="dropdown-menu bg-dark bg-opacity-25 container dropdown-menu-end">
-                    <li><a class="dropdown-item text-white" href="#">Login</a></li>
+                <ul class="dropdown-menu bg-dark bg-opacity-25 container dropdown-menu-end w-100">
+                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se connecter</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">S'inscrire</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-white" href="#">Consulter réservations</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
                 </ul>
             </div>
         </ul>
@@ -58,7 +59,7 @@
         <div class="carousel-item">
             <img style="filter: brightness(65%);" src="./ACF2L/images/slide-3.jpg" class="d-block w-100" alt="Slide3">
             <div class="carousel-caption position-absolute top-50 start-50 translate-middle text-center w-100">
-                <h1>Venez piloter un ULM !</h1>
+                <h1>Venez piloter un ULM !<br></h1>
                 <button class="btn btn-outline-light">Réserver maintenant !</button>
             </div>
         </div>
@@ -68,8 +69,50 @@
 <div class="container mx-auto bg-white z-10 w-50 mt-5">
     <h1 class="text-center" style="color: #FF5722;">Nos activités <br><br></h1>
     <p class="text-center" >L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports, adhérente à la FFULM (Fédération Française d’ULM). Association enregistrée n°04674 - - Agrément n° AS70986858 Le siège social demeure 62, Avenue de la République, 70200 Lure.
-        <br>L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</p>
+        <br><p class="font-weight-bold">L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</p></p>
 </div>
 
+<div class="container mx-auto bg-white z-10 w-50 mt-5 pt-5">
+    <h3>Pour cela, il assure les prestations complémentaires suivantes :<br></h3>
+    <ul>
+        <li>
+        Maintenance des ULM moteur, structure…
+        </li>
+        <li>
+        Montage des ULM et de tout instrument de navigation : Compas, radio, transpondeur…
+        </li>
+        <li>
+        Un service de restauration rapide.
+        </li>
+        <li>
+        Un hébergement en proposant trois studios et six chambres pour les élèves stagiaires.
+        </li>
+        <li>
+        Location d’emplacement ULM dans des hangars pour les particuliers.
+        </li>
+    </ul>
+</div>
+<div id="sectioninfo"></div>
+<div class="container">
+    <div class="container" id="section1">
+    <img src="./ACF2L/images/restauranticon.png" alt="iconrestaurant">
+    <h5>Restauration et hébergement</h5>
+    <p>Nous proposons de la restauration rapide sur place, un service d’hébergement pour les élèves stagiaires</p>
+    </div>
+    <div class="container" id="section2">
+    <img src="./ACF2L/images/clockicon.png" alt="iconorloge">
+    <h5>Leçons d’ULM</h5>
+    <p>Nous proposons des cours pour la prise en main des ULM</p>
+    </div>
+    <div class="container" id="section3">
+    <img src="./ACF2L/images/calendriericon.png" alt="iconcalendrier">
+    <h5>Bus</h5>
+    <p>Des bus sont disponibles pour se rendre sur le lieux de décolage</p>
+    </div>
+</div>
+<div class="container w-50 mx-auto">
+    <h4>Météo</h4>
+<iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
+    </div>
 </body>
 </html>
