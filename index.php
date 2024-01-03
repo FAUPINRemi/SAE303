@@ -174,7 +174,7 @@
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Membre</h5>
   <div class="card-body">
   <h4 class="text-center text-white">90€ - 1h</h4>
-    <p class="card-text text-white text-center">Prix pour les 10 premières heures.<br>La cotidation pour le club est de 105€.<br>Assurance comprise<br>Avoir licence FFPLUM ou FFW</p>
+    <p class="card-text text-white text-center">Prix pour les 10 premières heures.<br>La cotisation pour le club est de 105€.<br>Assurance comprise<br>Avoir licence FFPLUM ou FFW</p>
     <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>

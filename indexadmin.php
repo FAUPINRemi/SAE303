@@ -21,7 +21,7 @@
                 <a class="nav-link text-white text-reset" aria-current="page" href="#sectioninfo">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="reservation.php">Réserver</a>
+                <a class="nav-link text-white text-reset" href="connexion.php">Réserver</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white text-reset" href="#">Contact</a>
@@ -132,7 +132,7 @@
   <img src="./ACF2L/images/course-2.jpg" class="card-img-top w-75 mx-auto" alt="paramoteur">
   <div class="card-body">
     <p class="card-text text-white text-center">Le paramoteur est léger et maniable, ce qui le rend facile et maniable.<br>Avec sa petite taille, il vous permet d'aatterrir dand des espaces restraints.</p>
-    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
+    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
     <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">129€</p>
   </div>
 </div>
@@ -142,7 +142,7 @@
   <img src="./ACF2L/images/course-3.jpg" class="card-img-top w-75 mx-auto" alt="Multilaxes">
   <div class="card-body">
     <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
-    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
+    <a href="connexion.php.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
     <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
   </div>
 </div>
@@ -156,35 +156,39 @@
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
 <h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Vol découverte</h5>
   <div class="card-body">
+    <h4 class="text-center text-white">60€ - 30min</h4>
     <p class="card-text text-white text-center">Vol découverte de 30 min<br>Balade Chateau de Chantilly<br>Essence comprise <br>Possibilité de promenade à la carte </p>
-    <a href="resevration.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:55px;">Réserver</a>
+    <a href="connexion.php" class="btn rounded w-50 text-white mx-auto" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
-<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Paramoteur</h5>
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Forfait initiation</h5>
   <div class="card-body">
-    <p class="card-text text-white text-center">Le paramoteur est léger et maniable, ce qui le rend facile et maniable.<br>Avec sa petite taille, il vous permet d'aatterrir dand des espaces restraints.</p>
-    <a href="resevration.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
-    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">129€</p>
+  <h4 class="text-center text-white">500€ - 5h de vol</h4>
+    <p class="card-text text-white text-center">Pour commencer à apprendre à piloter pendant 5 vos avec un instructeur du club.<br> C’est vous qui pilotez ! <br> L’idéal pour se faire une idée</p>
+    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
-<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Le multiaxes</h5>
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Membre</h5>
   <div class="card-body">
-    <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
-    <a href="resevration.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
-    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
+  <h4 class="text-center text-white">90€ - 1h</h4>
+    <p class="card-text text-white text-center">Prix pour les 10 premières heures.<br>La cotisation pour le club est de 105€.<br>Assurance comprise<br>Avoir licence FFPLUM ou FFW</p>
+    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
 <div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
-<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Le multiaxes</h5>
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Vol découverte </h5>
   <div class="card-body">
-    <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
-    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
-    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
+  <h4 class="text-center text-white">64€ - 1h</h4>
+    <p class="card-text text-white text-center" >+10h = 75 €/h<br>
++20h = 71 €/h<br>
++30h = 67 €/h<br>
+Pour les moins de 25ans il y a une remise de 20%</p>
+    <a href="connexion" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 </div>
