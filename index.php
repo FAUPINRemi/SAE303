@@ -111,6 +111,83 @@
     </div>
 </div>
 
+<div class="container mx-auto bg-white z-10 w-50 mt-5">
+    <h1 class="text-center mt-5" style="color: #FF5722;">Catégories d'ULM<br><br></h1>
+    <h4 class="text-center font-weight-bold">Nous vous proposons</h4>
+</div>
+
+<div class="container d-flex justify-content-center">
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Hélicoptère Ultra Léger</h5>
+  <img src="./ACF2L/images/course-1.jpg" class="card-img-top w-75 mx-auto" alt="hélico_ultra_léger">
+  <div class="card-body">
+    <p class="card-text text-white text-center">Cet ULM offrent une grande manœuvrabilité et une grande capacité d'ascension. <br>Ils peuvent être utilisés pour des vols de loisirs, de tourisme ou de compétition.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:55px;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">79€</p>
+  </div>
+</div>
+
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Paramoteur</h5>
+  <img src="./ACF2L/images/course-2.jpg" class="card-img-top w-75 mx-auto" alt="paramoteur">
+  <div class="card-body">
+    <p class="card-text text-white text-center">Le paramoteur est léger et maniable, ce qui le rend facile et maniable.<br>Avec sa petite taille, il vous permet d'aatterrir dand des espaces restraints.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">129€</p>
+  </div>
+</div>
+
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Le multiaxes</h5>
+  <img src="./ACF2L/images/course-3.jpg" class="card-img-top w-75 mx-auto" alt="Multilaxes">
+  <div class="card-body">
+    <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto bg-white z-10 w-50 mt-5">
+    <h1 class="text-center mt-5" style="color: #FF5722;">Tarifs<br><br></h1>
+</div>
+
+<div class="container d-flex justify-content-center">
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Vol découverte</h5>
+  <div class="card-body">
+    <p class="card-text text-white text-center">Vol découverte de 30 min<br>Balade Chateau de Chantilly<br>Essence comprise <br>Possibilité de promenade à la carte </p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:55px;">Réserver</a>
+  </div>
+</div>
+
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Paramoteur</h5>
+  <div class="card-body">
+    <p class="card-text text-white text-center">Le paramoteur est léger et maniable, ce qui le rend facile et maniable.<br>Avec sa petite taille, il vous permet d'aatterrir dand des espaces restraints.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">129€</p>
+  </div>
+</div>
+
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Le multiaxes</h5>
+  <div class="card-body">
+    <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
+  </div>
+</div>
+
+<div class="card m-5" style="width: 18rem; background-color:#8FD200; rounded">
+<h5 class="card-title text-center p-2 rounded text-white" style="background-color:#78B000;">Le multiaxes</h5>
+  <div class="card-body">
+    <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
+    <a href="#" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
+    <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
+  </div>
+</div>
+</div>
 
 <div class="container w-50 mx-auto">
     <h4>Météo</h4>
