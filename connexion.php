@@ -60,7 +60,7 @@ $conn->close();
                 <a class="nav-link text-white text-reset" aria-current="page" href="index.php">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="#">Réserver</a>
+                <a class="nav-link text-white text-reset" href="reservation.php">Réserver</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white text-reset" href="index.php">Contact</a>
@@ -88,7 +88,7 @@ $conn->close();
             <br>
             <label for="user_password">Mot de passe</label>
             <input type="password" name="user_password" placeholder="Mot de passe" class="form-control">
-            <p>Pas encore inscrit ?<a href="inscription.php"><br>S'inscrire'</a></p>
+            <p>Pas encore inscrit ?<a href="inscription.php"><br>S'inscrire</a></p>
             
             <label for="Cookie">Souhaitez-vous l'utilisation de cookies?  </label>
             <br>

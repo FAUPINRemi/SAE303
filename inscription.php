@@ -31,7 +31,7 @@
                 <a class="nav-link text-white text-reset" aria-current="page" href="index.php">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="#">Réserver</a>
+                <a class="nav-link text-white text-reset" href="reservation.php">Réserver</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white text-reset" href="index.php">Contact</a>
