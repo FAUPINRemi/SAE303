@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACF2L - Bienvenue</title>
+    <link rel="stylesheet" href="style2.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -192,6 +193,124 @@ Pour les moins de 25ans il y a une remise de 20%</p>
 </div>
 </div>
 
+
+<div class="container  bg-white z-10  mt-5">
+    <h1 class="text-center mt-5 mx-auto w-50 pt-5" style="color: #FF5722;">Nos moyens pédagogiques<br><br></h1>
+    <h4 class="font-weight-bold text-decoration-underline pt-5">Sur le site nous disposons de : </h4>
+</div>
+<div class="container d-flex justify-content-center w-50">
+<div class="container bg-white z-10 w-50 mt-5">
+    <ul>
+        <li>
+        Une surface totale de 45 hectares dégagés.
+        </li>
+        <li>
+        Deux pistes en X de 800 et 450 m.
+        </li>
+        <li>
+        Un hydrosurface de 8 hectares.
+        </li>
+        <li>
+       Un atelier d'entretien et de réparation.
+        </li>
+        <li>
+        Des capacités d'accueil et de restauration sur place.
+        </li>
+    </ul>
+</div>
+<div class="container bg-white z-10 w-50 mt-5">
+    <ul>
+        <li>
+        Trois hangars avec surface couverte de 4300 m².
+        </li>
+        <li>
+        Locaux administratifs informatisés.
+        </li>
+        <li>
+        Salle de cours multimédia avec simulateur de vol.
+        </li>
+        <li>
+     Connexion WIFI gratuit sur toute la base
+        </li>
+    </ul>
+</div>
+</div>
+
+
+<div class="card mt-5 mb-5 rounded mx-auto w-50 " style="background-color:#8FD200;">
+  <img src="./ACF2L/images/about.png" class="card-img-top w-100 mx-auto rounded" alt="vue_ciel_aérodrome">
+</div>
+
+
+
+<div class="container  bg-white z-10  mt-5 mb-5">
+    <h1 class="text-center mt-5 mb-5 mx-auto w-50 pt-5" style="color: #FF5722;">Notre équipe<br><br></h1>
+
+</div>
+<div class="container mt-5 mb-5"></div>
+<div class="container d-flex justify-content-center mt-5 pt-5">
+
+<div class="flip-card rounded" style="width=400px; height=auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="./ACF2L/images/pilote2.png" style="width=400px; height=auto;" class="card-img-top mx-auto" alt="img_pilote1">
+            <p class="title">Kevin SAITOUT</p>
+            <p>Instructeur</p>
+        </div>
+        <div class="flip-card-back">
+            <p class="title">Instructeur</p>
+            <p>Le chef pilote Kevin vous accompagnera tout au long de votre apprentissage. <br>Il vous guideras et s’assureras que tous ce passe bien.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="flip-card rounded" style="width=400px; height=auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="./ACF2L/images/pilot_femme.webp" style="width=400px; height=auto;" class="card-img-top mx-auto" alt="img_pilote1">
+            <p class="title">Justine VOLAVUE</p>
+            <p>Pilote ULM</p>
+        </div>
+        <div class="flip-card-back">
+            <p class="title">Pilote ULM</p>
+            <p>La pilote Justine vous accompagnera tout au long de votre apprentissage.<br> Il vous guideras et s’assureras que tous ce passe bien.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="flip-card rounded" style="width=400px; height=auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="./ACF2L/images/secretaire.webp" style="width=400px; height=auto;" class="card-img-top mx-auto" alt="img_pilote1">
+            <p class="title">Céline LAPLUME</p>
+            <p>Secrétaire</p>
+        </div>
+        <div class="flip-card-back">
+            <p class="title">Secrétaire</p>
+            <p>Notre secrétaire Céline vous accueillera dans notre club.<br> Elle assureras la conformité de tous les documents nécessaires pour la pratique en vole.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="flip-card rounded" style="width=400px; height=auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="./ACF2L/images/pilote4.png"  class="card-img-top mx-auto w-100" alt="img_pilote1">
+            <p class="title">Alain STRUMENT</p>
+            <p>Instructeur</p>
+        </div>
+        <div class="flip-card-back">
+            <p class="title">Instructeur</p>
+            <p>L’instructeur Alain vous accompagnera tout au long de votre apprentissage. <br>Il vous guideras et s’assureras de tous ce passe bien.</p>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
 <div class="container w-50 mx-auto">
     <h4>Météo</h4>
 <iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
