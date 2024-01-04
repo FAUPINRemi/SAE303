@@ -310,10 +310,51 @@ Pour les moins de 25ans il y a une remise de 20%</p>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+
+
 </div>
-<div class="container w-50 mx-auto">
+<div class="container  bg-white z-10  mt-5 mb-5">
+    <h1 class="text-center mt-5 mb-5 mx-auto w-50 pt-5" style="color: #FF5722;">Les évènements à venir</h1>
+</div>
+<div class="container  bg-white z-10  mt-5 mb-5">
+    <h4 class="text-center mt-5 mb-5 mx-auto w-50 pt-5">Plus d'informations sur le site de la fédération</h4>
+</div>
+
+<div class="container w-50 mx-auto ">
+    <div class="container">
+    <img src="./ACF2L/images/event-1.png" alt="en=vent-1-grand-est" class="w-100 mx-auto">
+    <div style="background-color: #FF5722;">
+    <h4 class="text-white">Journée Sécurité des vols - Grand Est</h4>
+    <p  class="text-white">Serrouville, France - 13 novembre 2022 - De 9h à 14h </p>
+    </div>
+    </div>
+    <img src="./ACF2L/images/event-2.jpg" alt="en=vent-2-grand-est" class="w-100 mx-auto mt-5">
+    <img src="./ACF2L/images/event-4.jpg" alt="en=vent-1-grand-est" class="w-100 mx-auto mt-5">
+    <img src="./ACF2L/images/event-5.jpg" alt="en=vent-1-grand-est" class="w-100 mx-auto mt-5">
+</div>
+
+<div class="container w-50 mx-auto pt-5 mt-5">
     <h4>Météo</h4>
+    <p class="w-75">Veuillez à faire vos réservation de vol en fonction de la météo. <br>Un ciel éclaircie est à privilégier pour le vol. </p>
 <iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
     </div>
+
+    <footer class="text-white bg-black mx-auto">
+        <h3 class="mx-auto text-center pt-5 mt-5 ">Contacter nous</h3>
+        <div class="pb-5">
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/phone icon.png" alt="phoneicon">
+                <p>+ 33 01 60 56 60 60</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <p>acf2l@gmail.com</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/xicon.png" alt="xicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/linkdinicon.png" alt="linkdlnicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/instaicon.png" alt="instaicon" style="width: 50px; height:auto;">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
