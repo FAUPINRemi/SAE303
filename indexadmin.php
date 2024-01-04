@@ -331,7 +331,7 @@ Pour les moins de 25ans il y a une remise de 20%</p>
 <div class="container w-50 mx-auto ">
     <div class="container">
     <img src="./ACF2L/images/event-1.png" alt="en=vent-1-grand-est" class="w-100 mx-auto">
-    <div style="background-color: #FF5722;">
+    <div style="background-color: #FF5722; rounded">
     <h4 class="text-white">Journée Sécurité des vols - Grand Est</h4>
     <p  class="text-white">Serrouville, France - 13 novembre 2022 - De 9h à 14h </p>
     </div>
