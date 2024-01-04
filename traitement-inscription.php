@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $majeur = $_POST["majeur"];
     $parent = $_POST["parent"];
     $handicap = $_POST["handicap"];
-    $email = $_POST["user_email"];
+    $email = $_POST["email"];
     $phone = $_POST["phone"];
 
     try {
