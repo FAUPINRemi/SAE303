@@ -1,31 +1,31 @@
 <?php
-// Informations de connexion à la base de données (à personnaliser)
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "acf2l";
 
-// Création de la connexion
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérification de la connexion
+
 if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
 }
 
 
 if (isset($_POST['valider'])) {
-    // Récupération des valeurs du formulaire
+    
     $email = $_POST['user_email'];
     $password = $_POST['user_password'];
 
-    // Votre requête SQL pour vérifier l'authentification
+   
     $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
     $result = $conn->query($sql);
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
     if ($user) {
-       // Check if the user is an admin
+       
         if ($email === 'acf2l.admin@gmail.com' && $password === 'adminacf2l@@') {
             header("Location: indexadmin.php");
             exit();
