@@ -129,7 +129,7 @@
             <input type="tel" id="phone" name="phone" class="col-md-6 mx-auto form-control mb-2" placeholder="Téléphone" required/> 
 
             <label for="user_email" class="col-md-6 mx-auto">Email :</label>
-            <input type="email" name="user_email" id="user_email" class="col-md-6 mx-auto form-control mb-2" placeholder="Email" required>
+            <input type="email" name="user_email" id="email" class="col-md-6 mx-auto form-control mb-2" placeholder="Email" required>
 
             <label for="user_password" class="col-md-6 mx-auto">Mot de passe </label>
             <input type="password" name="user_password" id="user_password" class="col-md-6 mx-auto form-control mb-2" placeholder="Mot de passe" required>

@@ -58,7 +58,7 @@ if(isset($_SESSION['user_id'])) {
 
 // Fonction pour obtenir le rôle d'un utilisateur à partir de son email
 function getRoleByEmail($email) {
-    // Connexion à la base de données (à ajuster selon votre configuration)
+    
     $pdo = new PDO('mysql:host=localhost;dbname=acf2l', 'root', '');
 
     // Requête pour obtenir le rôle à partir de l'email
