@@ -37,18 +37,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $majeur = $_POST["majeur"];
     $parent = $_POST["parent"];
     $handicap = $_POST["handicap"];
-    $email = $_POST["user_email"];
+    $email = $_POST["email"];
     $phone = $_POST["phone"];
 
     try {
         // Requête SQL pour insérer les données dans la table appropriée
-        $sql = "INSERT INTO utilisateurs (user_email, civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, telephone) VALUES (:user_email, :civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :telephone)";
+        $sql = "INSERT INTO utilisateurs (email, civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, telephone) VALUES (:email, :civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :telephone)";
 
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
 
         // Liaison des paramètres
-        $stmt->bindParam(':user_email', $email);
+        $stmt->bindParam(':email', $email);
         $stmt->bindParam(':civilite', $civilite);
         $stmt->bindParam(':nom', $user_name);
         $stmt->bindParam(':prenom', $user_firstname);
