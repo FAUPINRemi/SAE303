@@ -39,10 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $handicap = $_POST["handicap"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
+    $password = $_POST["password"];
 
     try {
         // Requête SQL pour insérer les données dans la table appropriée
-        $sql = "INSERT INTO utilisateurs (email, civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, telephone) VALUES (:email, :civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :telephone)";
+        $sql = "INSERT INTO utilisateurs (email, civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, telephone, password) VALUES (:email, :civilite, :nom, :prenom, :date_naissance, :num_rue, :rue, :code_postal, :ville, :situation_familiale, :date_debut, :date_fin, :mineur, :majeur, :parent, :handicap, :telephone, :password)";
 
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
