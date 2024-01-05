@@ -2,10 +2,11 @@
 session_start();
 
 // Vérifier si l'utilisateur est connecté
-if(!isset($_SESSION['user_id'])) {
-    header("Location: connexion.php");
+if(!isset($_SESSION['user'])) {
+    header("Location: indexadmin.php");
     exit();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,8 +42,7 @@ if(!isset($_SESSION['user_id'])) {
                     <img style="width: 40px; height: 40px;" src="./ACF2L/images/Log_white_icon.png" alt="logicon">
                 </button>
                 <ul class="dropdown-menu bg-dark bg-opacity-25 container dropdown-menu-end w-100">
-                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se connecter</a></li>
-                    <li><a class="dropdown-item text-white text-reset" href="inscription.php">S'inscrire</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se déconnecter</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
                 </ul>

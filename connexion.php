@@ -13,6 +13,7 @@ if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
 }
 
+
 if (isset($_POST['valider'])) {
     // Récupération des valeurs du formulaire
     $email = $_POST['user_email'];
@@ -24,21 +25,24 @@ if (isset($_POST['valider'])) {
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
     if ($user) {
-        if (password_verify($password, $user["password"])) {
-            session_start();
-            $_SESSION["user"] = "yes";
-            header("Location: indexconnecte.php");
-            die();
-        }else{
-            echo "<div class='alert_password'>Le mot de passe ne correspond pas</div>";
-        }
-    }else{
-        echo "<div class='alert_email'>Email ne correspond pas</div>";
-    }
+       // Check if the user is an admin
+        if ($email === 'acf2l.admin@gmail.com' && $password === 'adminacf2l@@') {
+            header("Location: indexadmin.php");
+            exit();
+            } else {
+                header("Location: indexconnecte.php");
+                exit();
+            }
+      
+}  }
 
 
-    
-}
+
+
+
+
+
+        
 
 // Fermeture de la connexion à la base de données
 $conn->close();
