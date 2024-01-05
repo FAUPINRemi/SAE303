@@ -43,6 +43,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requete = "INSERT INTO utilisateurs (civilite, nom, prenom, date_naissance, numRue, rue, codePostal, ville, situationFamiliale, dateDebut, dateFin, mineur, majeur, parent, handicap, email, password) 
     VALUES ('$civilite', '$nom', '$prenom', '$date_naissance', '$numRue', '$rue', '$codePostal', '$ville', '$situationFamiliale', '$dateDebut', '$dateFin', '$mineur', '$majeur', '$parent', '$handicap', '$email', '$password')";
 
+
+if ($connexion->query($requete) === TRUE) {
+    // Envoi d'e-mail
+    $destinataire = $email; // Utilisez l'e-mail de l'utilisateur
+    $sujet = "Bienvenue sur notre site";
+    $message = "Merci de vous être inscrit sur notre site. Votre compte a été créé avec succès.";
+
+    $headers = "From: expediteur@example.com\r\n";
+    $headers .= "Reply-To: expediteur@example.com\r\n";
+    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+
+    // Envoi de l'e-mail
+    mail($destinataire, $sujet, $message, $headers);
+
+    // Redirection vers une page de confirmation
+    header("Location: confirmation-inscription.php");
+    exit();
+} else {
+    echo "Erreur lors de l'ajout des données : " . $connexion->error;
+}
+
     if ($connexion->query($requete) === TRUE) {
         // Redirection vers une page de confirmation
         header("Location: confirmation-inscription.php");
@@ -54,5 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fermeture de la connexion
     $connexion->close();
 }
+
 
 ?>
