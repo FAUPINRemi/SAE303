@@ -40,7 +40,7 @@ session_start();
 
 if(isset($_SESSION['user_id'])) {
     
-    $userRole = getRoleByEmail($_SESSION['user_email']);
+    $userRole = getRoleByEmail($_SESSION['email']);
 
     
     if($userRole == 'admin') {
