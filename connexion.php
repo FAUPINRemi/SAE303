@@ -54,38 +54,7 @@ if(isset($_SESSION['user_id'])) {
 
 ?>
 
-<?php
 
-// Fonction pour obtenir le rôle d'un utilisateur à partir de son email
-function getRoleByEmail($email) {
-    
-    $pdo = new PDO('mysql:host=localhost;dbname=acf2l', 'root', '');
-
-    // Requête pour obtenir le rôle à partir de l'email
-    $query = $pdo->prepare("SELECT email FROM utilisateurs WHERE email = :email");
-    $query->bindParam(':email', $email);
-    $query->execute();
-
-    // Récupération du résultat
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-
-    // Si l'utilisateur est trouvé, retourne le rôle, sinon retourne null
-    if ($result) {
-        return $result['email'];
-    } else {
-        return null;
-    }
-}
-
-$userEmail = 'john.doe@example.com';
-$userRole = getRoleByEmail($userEmail);
-
-if ($userRole !== null) {
-    echo "Le rôle de l'utilisateur avec l'email $userEmail est : $userRole";
-} else {
-    echo "Utilisateur non trouvé.";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
