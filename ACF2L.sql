@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 05 jan. 2024 à 14:07
+-- Généré le : ven. 05 jan. 2024 à 15:35
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -69,6 +69,13 @@ CREATE TABLE `utilisateurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id`, `civilite`, `nom`, `prenom`, `date_naissance`, `numRue`, `rue`, `codePostal`, `ville`, `situationFamiliale`, `dateDebut`, `dateFin`, `mineur`, `majeur`, `parent`, `handicap`, `email`, `telephone`, `date_inscription`, `admin`, `password`) VALUES
+(10, 'Madame', 'Admin3', 'test', '2024-01-13', '755', 'petite af', '02130', 'dvsvs', 'celibataire ', '0000-00-00', '0000-00-00', 0, 0, 0, 'non', 'remi.faupin04@gmail.com', '', '2024-01-05 14:33:25', 0, '$2y$10$h8h/22Pza7zhrNSceuK6NeevLPcdd2kooOuymaoXv/0p1IwiyDlDe');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -98,7 +105,7 @@ ALTER TABLE `reservations`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
