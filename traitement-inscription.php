@@ -54,4 +54,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fermeture de la connexion
     $connexion->close();
 }
+
 ?>
