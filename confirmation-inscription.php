@@ -23,7 +23,7 @@
 
     <div id="ins" class="container p-1 rounded-5 bg text-white text-center mx-auto" style="margin-top:150px;">
 <h1>Inscription réussi !</h1>
-<button class="btn btn-outline-light">Se connecter</button>
+<a href="connexion.php"><button class="btn btn-outline-light">Se connecter</button></a>
 </div>
     
       

@@ -2,8 +2,8 @@
 session_start();
 
 
-if(!isset($_SESSION['user_id'])) {
-    header("Location: connexion.php");
+if(!isset($_SESSION['user'])) {
+    header("Location: indexconnecte.php");
     exit();
 }
 ?>

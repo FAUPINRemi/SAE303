@@ -15,43 +15,33 @@ if ($conn->connect_error) {
 
 if (isset($_POST['valider'])) {
     // Récupération des valeurs du formulaire
-    $user_email = $_POST['email'];
-    $user_password = $_POST['user_password'];
+    $email = $_POST['user_email'];
+    $password = $_POST['user_password'];
 
     // Votre requête SQL pour vérifier l'authentification
-    $sql = "SELECT * FROM utilisateurs WHERE email='$user_email' AND password='$user_password'";
+    $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
     $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // Utilisateur authentifié avec succès, rediriger vers la page d'accueil
-        header("Location: index.html");
-        exit(); // Assure que le script s'arrête après la redirection
-    } else {
-        echo "Identifiants incorrects";
+    $result = mysqli_query($conn, $sql);
+    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    if ($user) {
+        if (password_verify($password, $user["password"])) {
+            session_start();
+            $_SESSION["user"] = "yes";
+            header("Location: indexconnecte.php");
+            die();
+        }else{
+            echo "<div class='alert_password'>Le mot de passe ne correspond pas</div>";
+        }
+    }else{
+        echo "<div class='alert_email'>Email ne correspond pas</div>";
     }
+
+
+    
 }
 
 // Fermeture de la connexion à la base de données
 $conn->close();
-
-
-session_start();
-
-
-if(isset($_SESSION['user_id'])) {
-    
-    $userRole = getRoleByEmail($_SESSION['email']);
-
-    
-    if($userRole == 'admin') {
-        header("Location: indexadmin.php");
-        exit();
-    } else {
-        header("Location: indexconnecte.php");
-        exit();
-    }
-}
-
 ?>
 
 
