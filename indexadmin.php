@@ -34,7 +34,7 @@ if(!isset($_SESSION['user'])) {
                 <a class="nav-link text-white text-reset" href="connexion.php">Réserver</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="#">Contact</a>
+                <a class="nav-link text-white text-reset" href="#footer">Contact</a>
             </li>
          
             <div class="btn-group">
@@ -42,9 +42,9 @@ if(!isset($_SESSION['user'])) {
                     <img style="width: 40px; height: 40px;" src="./ACF2L/images/Log_white_icon.png" alt="logicon">
                 </button>
                 <ul class="dropdown-menu bg-dark bg-opacity-25 container dropdown-menu-end w-100">
-                    <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se déconnecter</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="index.php">Se déconnecter</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
+                    <li><a class="dropdown-item text-white text-reset" href="reservationpageadmin.php">Admin réservations</a></li>
                 </ul>
             </div>
         </ul>
@@ -69,7 +69,7 @@ if(!isset($_SESSION['user'])) {
             <img style="filter: brightness(65%);" src="./ACF2L/images/slide-3.jpg" class="d-block w-100" alt="Slide3">
             <div class="carousel-caption position-absolute top-50 start-50 translate-middle text-center w-100">
                 <h1>Venez piloter un ULM !<br></h1>
-                <button class="btn btn-outline-light">Réserver maintenant !</button>
+                <a href="reservation.php"><button class="btn btn-outline-light">Réserver maintenant !</button></a>
             </div>
         </div>
     </div>
@@ -141,7 +141,7 @@ if(!isset($_SESSION['user'])) {
   <img src="./ACF2L/images/course-2.jpg" class="card-img-top w-75 mx-auto" alt="paramoteur">
   <div class="card-body">
     <p class="card-text text-white text-center">Le paramoteur est léger et maniable, ce qui le rend facile et maniable.<br>Avec sa petite taille, il vous permet d'aatterrir dand des espaces restraints.</p>
-    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Réserver</a>
     <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">129€</p>
   </div>
 </div>
@@ -151,7 +151,7 @@ if(!isset($_SESSION['user'])) {
   <img src="./ACF2L/images/course-3.jpg" class="card-img-top w-75 mx-auto" alt="Multilaxes">
   <div class="card-body">
     <p class="card-text text-white text-center" style="margin-top:55px;">Il est apprécié pour sa maniabilité, sa facilité de pilotage et son prix abordable.</p>
-    <a href="connexion.php.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722; margin-top:145px;">Réserver</a>
     <p class="card-text text-white text-left font-weight-bold d-flex flex-row-reverse">229€</p>
   </div>
 </div>
@@ -167,7 +167,7 @@ if(!isset($_SESSION['user'])) {
   <div class="card-body">
     <h4 class="text-center text-white">60€ - 30min</h4>
     <p class="card-text text-white text-center">Vol découverte de 30 min<br>Balade Chateau de Chantilly<br>Essence comprise <br>Possibilité de promenade à la carte </p>
-    <a href="connexion.php" class="btn rounded w-50 text-white mx-auto" style="background-color:#FF5722;">Go</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white mx-auto" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
@@ -176,7 +176,7 @@ if(!isset($_SESSION['user'])) {
   <div class="card-body">
   <h4 class="text-center text-white">500€ - 5h de vol</h4>
     <p class="card-text text-white text-center">Pour commencer à apprendre à piloter pendant 5 vos avec un instructeur du club.<br> C’est vous qui pilotez ! <br> L’idéal pour se faire une idée</p>
-    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
@@ -185,7 +185,7 @@ if(!isset($_SESSION['user'])) {
   <div class="card-body">
   <h4 class="text-center text-white">90€ - 1h</h4>
     <p class="card-text text-white text-center">Prix pour les 10 premières heures.<br>La cotisation pour le club est de 105€.<br>Assurance comprise<br>Avoir licence FFPLUM ou FFW</p>
-    <a href="connexion.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 
@@ -197,7 +197,7 @@ if(!isset($_SESSION['user'])) {
 +20h = 71 €/h<br>
 +30h = 67 €/h<br>
 Pour les moins de 25ans il y a une remise de 20%</p>
-    <a href="connexion" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
+    <a href="reservation.php" class="btn rounded w-50 text-white" style="background-color:#FF5722;">Go</a>
   </div>
 </div>
 </div>
@@ -347,7 +347,7 @@ Pour les moins de 25ans il y a une remise de 20%</p>
 <iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
     </div>
 
-    <footer class="text-white bg-black mx-auto">
+    <footer id="footer" class="text-white bg-black mx-auto">
         <h3 class="mx-auto text-center pt-5 mt-5 ">Contacter nous</h3>
         <div class="pb-5">
             <div class="d-flex justify-content-center w-100 text-center">

@@ -4,6 +4,7 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACF2L - Bienvenue</title>
+    <link rel="icon" type="image/x-icon" href="./ACF2L/images/logoaf2l.png">
     <link rel="stylesheet" href="style2.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -25,7 +26,7 @@
                 <a class="nav-link text-white text-reset" href="connexion.php">Réserver</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="#">Contact</a>
+                <a class="nav-link text-white text-reset" href="#footer">Contact</a>
             </li>
          
             <div class="btn-group">
@@ -60,7 +61,7 @@
             <img style="filter: brightness(65%);" src="./ACF2L/images/slide-3.jpg" class="d-block w-100" alt="Slide3">
             <div class="carousel-caption position-absolute top-50 start-50 translate-middle text-center w-100">
                 <h1>Venez piloter un ULM !<br></h1>
-               <a><button class="btn btn-outline-light">Réserver maintenant !</button></a> 
+                <a href="connextion.php"><button class="btn btn-outline-light">Réserver maintenant !</button></a>
             </div>
         </div>
     </div>
@@ -339,7 +340,7 @@ Pour les moins de 25ans il y a une remise de 20%</p>
 <iframe id="widget_autocomplete_preview"  class="w-100 h-50"  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
     </div>
 
-    <footer class="text-white bg-black mx-auto">
+    <footer id="footer" class="text-white bg-black mx-auto">
         <h3 class="mx-auto text-center pt-5 mt-5 ">Contacter nous</h3>
         <div class="pb-5">
             <div class="d-flex justify-content-center w-100 text-center">
