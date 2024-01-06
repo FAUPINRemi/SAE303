@@ -108,6 +108,12 @@ ALTER TABLE `utilisateurs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
+INSERT INTO `utilisateurs` (`id`, `civilite`, `nom`, `prenom`, `date_naissance`, `numRue`, `rue`, `codePostal`, `ville`, `situationFamiliale`, `dateDebut`, `dateFin`, `mineur`, `majeur`, `parent`, `handicap`, `email`, `telephone`, `date_inscription`, `admin`, `password`) VALUES
+(10, 'Madame', 'Admin3', 'test', '2024-01-13', '755', 'petite af', '02130', 'dvsvs', 'celibataire ', '0000-00-00', '0000-00-00', 0, 0, 0, 'non', 'remi.faupin04@gmail.com', '', '2024-01-05 14:33:25', 0, '$2y$10$h8h/22Pza7zhrNSceuK6NeevLPcdd2kooOuymaoXv/0p1IwiyDlDe'),
+(13, 'Monsieur', 'porto', 'rico', '2024-01-01', '12', 'portorico', '77100', 'meaux', 'celibataire ', '0000-00-00', '0000-00-00', 0, 0, 0, '', 'portorico@gmail.com', '', '2024-01-05 16:00:58', 0, '$2y$10$HPu0S62k1CB/dvuXtpnkoe9sevFN0oUcYnZzmZa21BKO6tIEjOsGy'),
+(14, 'Monsieur', 'Adif', 'acf2l', '1982-12-25', '12', 'rue de la cathédrale', '77100', 'Meaux', 'celibataire ', '0000-00-00', '0000-00-00', 0, 0, 0, '', 'acf2l.admin@gmail.com', '', '2024-01-05 18:09:10', 0, '$2y$10$EEI9NyJwDNOl.G/UdrO.cuG4zkbDS3B5HqfPHAVxnGSKCm.hTIwFO');
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
