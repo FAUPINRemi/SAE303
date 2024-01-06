@@ -9,8 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class="formulaire col-md-3 mt-5 mx-auto  text-white p-3">
+
+
+    <div class="formulaire col-md-3 mt-5 mx-auto  text-white p-5">
         Merci d'avoir réservé, un récapitulatif vous a été envoyé par mail.
+    </div>
+<div class="mx-auto text-center">
+    <a href="indexconnecte.php"><button class="btn btn-outline-light mx-auto">Retour à la page d'accueil</button></a>
     </div>
 </body>
 </html>
