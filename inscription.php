@@ -148,6 +148,23 @@
         </form>
 
     </div>
+    <footer id="footer" class="text-white bg-black mx-auto">
+        <h3 class="mx-auto text-center pt-5 mt-5 ">Contacter nous</h3>
+        <div class="pb-5">
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/phone icon.png" alt="phoneicon">
+                <p>+ 33 01 60 56 60 60</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <p>acf2l@gmail.com</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/xicon.png" alt="xicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/linkdinicon.png" alt="linkdlnicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/instaicon.png" alt="instaicon" style="width: 50px; height:auto;">
+            </div>
+        </div>
+    </footer>
 
     <script>
         function toggleDates() {
