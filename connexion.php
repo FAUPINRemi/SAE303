@@ -17,20 +17,8 @@ if (isset($_POST['valider'])) {
     $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
     $result = $conn->query($sql);
 
-    if ($result === false) {
-        // Ajout de message de débogage
-        echo "Erreur d'exécution de la requête : " . $conn->error;
-        exit();
-    }
-
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-
-        // Ajout de messages de débogage
-        echo '<script>';
-        echo 'console.log("Email dans le formulaire:", "' . $email . '");';
-        echo 'console.log("Email dans la base de données:", "acf2l.admin@gmail.com");';
-        echo '</script>';
 
         if ($email === 'acf2l.admin@gmail.com' && password_verify($password, $user['password'])) {
             session_start();
@@ -43,17 +31,12 @@ if (isset($_POST['valider'])) {
             exit();
         }
     } else {
-        // Ajout de messages de débogage
-        echo '<script>';
-        echo 'console.log("Email dans le formulaire (cas où le compte n\'existe pas):", "' . $email . '");';
-        echo 'window.alert("Le compte n\'existe pas.");';
-        echo '</script>';
+        echo '<script>window.alert("Le compte n\'existe pas.");</script>';
     }
 }
 
 $conn->close();
 ?>
-
 
 
 
