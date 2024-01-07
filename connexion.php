@@ -17,8 +17,20 @@ if (isset($_POST['valider'])) {
     $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
     $result = $conn->query($sql);
 
+    if ($result === false) {
+        // Ajout de message de débogage
+        echo "Erreur d'exécution de la requête : " . $conn->error;
+        exit();
+    }
+
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
+
+        // Ajout de messages de débogage
+        echo '<script>';
+        echo 'console.log("Email dans le formulaire:", "' . $email . '");';
+        echo 'console.log("Email dans la base de données:", "acf2l.admin@gmail.com");';
+        echo '</script>';
 
         if ($email === 'acf2l.admin@gmail.com' && password_verify($password, $user['password'])) {
             session_start();
@@ -31,16 +43,17 @@ if (isset($_POST['valider'])) {
             exit();
         }
     } else {
-        // L'email n'existe pas, affichez un message d'erreur en JavaScript
-        echo '<script>alert("Le compte n\'existe pas.");</script>';
-
+        // Ajout de messages de débogage
+        echo '<script>';
+        echo 'console.log("Email dans le formulaire (cas où le compte n\'existe pas):", "' . $email . '");';
+        echo 'window.alert("Le compte n\'existe pas.");';
+        echo '</script>';
     }
-    
 }
-
 
 $conn->close();
 ?>
+
 
 
 
@@ -104,16 +117,13 @@ $conn->close();
             <label for="Cookie">Souhaitez-vous l'utilisation de cookies?  </label>
             <br>
             <div class="text-center mb-5">
-                <input type="submit" class="btn btn-light mt-5 mx-auto " name="valider" value="valider"> 
+                <input type="submit" class="btn btn-light mt-5 mx-auto " name="valider" value="valider" onclick="window.alert('Le compte n\'existe pas.');"> 
             </div>
                 
             
         </form>
     </div>
 
-    <script>
-        window.alert("");
-    alert("");
-    </script>
+    
 </body>
 </html>
