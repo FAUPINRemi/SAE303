@@ -31,7 +31,9 @@ if (isset($_POST['valider'])) {
             exit();
         }
     } else {
+        // L'email n'existe pas, affichez un message d'erreur en JavaScript
         echo '<script>alert("Le compte n\'existe pas.");</script>';
+
     }
     
 }
@@ -40,8 +42,7 @@ if (isset($_POST['valider'])) {
 $conn->close();
 ?>
 
-$conn->close();
-?>
+
 
 
 
