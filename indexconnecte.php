@@ -19,7 +19,7 @@ if(!isset($_SESSION['user_email'])) {
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg bg-dark bg-opacity-25 text-white">
-    <a class="navbar-brand" href="index.php"><img style="width: 100px; height: 100px;" src="./ACF2L/images/logoaf2l.png" alt="logoaf2l"></a>
+    <a class="navbar-brand" href="indexconnecte.php"><img style="width: 100px; height: 100px;" src="./ACF2L/images/logoaf2l.png" alt="logoaf2l"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
