@@ -1,50 +1,41 @@
 <?php
-
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "acf2l";
 
-
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 
 if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
 }
 
-
 if (isset($_POST['valider'])) {
-    
     $email = $_POST['user_email'];
     $password = $_POST['user_password'];
 
-   
     $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
     $result = $conn->query($sql);
-    $result = mysqli_query($conn, $sql);
-    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    if ($user) {
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+
+      
+        if ($email === 'acf2l.admin@gmail.com' && password_verify($password, $user['password'])) {
+            session_start();
+            $_SESSION['user_email'] = $email;
+
        
-        if ($email === 'acf2l.admin@gmail.com' && $password === 'adminacf2l@@') {
             header("Location: indexadmin.php");
             exit();
-            } else {
-                header("Location: indexconnecte.php");
-                exit();
-            }
-      
-}  }
+        } else {
+            
+            header("Location: indexconnecte.php");
+            exit();
+        }
+    }
+}
 
-
-
-
-
-
-
-        
-
-// Fermeture de la connexion à la base de données
 $conn->close();
 ?>
 
