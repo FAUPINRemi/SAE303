@@ -17,7 +17,7 @@
 </body>
 </html>
 <nav class="navbar fixed-top navbar-expand-lg bg-dark bg-opacity-25 text-white">
-    <a class="navbar-brand" href="index.php"><img style="width: 100px; height: 100px;" src="./ACF2L/images/logoaf2l.png" alt="logoaf2l"></a>
+    <a class="navbar-brand" href="indexadmin.php"><img style="width: 100px; height: 100px;" src="./ACF2L/images/logoaf2l.png" alt="logoaf2l"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,7 +29,7 @@
                 <a class="nav-link text-white text-reset" aria-current="page" href="#sectioninfo">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="connexion.php">Réserver</a>
+                <a class="nav-link text-white text-reset" href="reservation.php">Réserver</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white text-reset" href="#footer">Contact</a>
@@ -50,7 +50,7 @@
 </nav>
 
 
-<div class="reservation">
+<div class="reservation" style='margin-top:150px; margin-bottom:150px'>
 <?php
 // Paramètres de connexion à la base de données
 $db_host = "localhost";
@@ -76,18 +76,19 @@ try {
 
         // Afficher les données (vous pouvez personnaliser cette partie selon vos besoins)
         
+
         echo "<table class='formulaire col-md-3 mt-5 mx-auto text-white border-0 mt-4' ";
-        echo "<tr><th>ID</th><th>Nom</th><th>Email</th></tr>";
+        echo "<tr><th>ID</th><th>Nom</th><th>Email</th><th>Vol_Ini</th><th>Cours_pilot</th><th>Balade</th><th>Formation_pilote</th><th>Date_reserv</th></tr>";
         foreach ($rows as $row) {
             echo "<tr class='mx-auto w-50'>";
-            echo "<td class='p-3'> " . $row['id'] . "</td>";
-            echo "<td class='p-3'>" . $row['nom'] . "</td>";
-            echo "<td class='p-3'>" . $row['email'] . "</td>";
-            echo "<td class='p-3'>" . $row['vol_initiation'] . "</td>";
-            echo "<td class='p-3'>" . $row['cours_pilotage'] . "</td>";
-            echo "<td class='p-3'>" . $row['balade_aerienne'] . "</td>";
-            echo "<td class='p-3'>" . $row['formation_pilote'] . "</td>";
-            echo "<td class='p-3'>" . $row['date_reservation'] . "</td>";
+            echo "<td class='p-5'> " . $row['id'] . "</td>";
+            echo "<td class='p-5'>" . $row['nom'] . "</td>";
+            echo "<td class='p-5'>" . $row['email'] . "</td>";
+            echo "<td class='p-5'>" . $row['vol_initiation'] . "</td>";
+            echo "<td class='p-5'>" . $row['cours_pilotage'] . "</td>";
+            echo "<td class='p-5'>" . $row['balade_aerienne'] . "</td>";
+            echo "<td class='p-5'>" . $row['formation_pilote'] . "</td>";
+            echo "<td class='p-5'>" . $row['date_reservation'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -102,4 +103,21 @@ try {
 $conn = null;
 ?>
 </div>
+<footer id="footer" class="text-white bg-black mx-auto">
+        <h3 class="mx-auto text-center pt-5 mt-5 ">Contacter nous</h3>
+        <div class="pb-5">
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/phone icon.png" alt="phoneicon">
+                <p>+ 33 01 60 56 60 60</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <p>acf2l@gmail.com</p>
+            </div>
+            <div class="d-flex justify-content-center w-100 text-center">
+                <img src="./ACF2L/images/xicon.png" alt="xicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/linkdinicon.png" alt="linkdlnicon" style="width: 50px; height:auto;">
+                <img src="./ACF2L/images/instaicon.png" alt="instaicon" style="width: 50px; height:auto;">
+            </div>
+        </div>
+    </footer>
 
