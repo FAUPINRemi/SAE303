@@ -27,16 +27,18 @@ SET time_zone = "+00:00";
 -- Structure de la table `reservations`
 --
 
-CREATE TABLE `reservations` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `vol_initiation` tinyint(1) DEFAULT NULL,
-  `cours_pilotage` tinyint(1) DEFAULT NULL,
-  `balade_aerienne` tinyint(1) DEFAULT NULL,
-  `formation_pilote` tinyint(1) DEFAULT NULL,
-  `date_reservation` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS `reservations`;
+CREATE TABLE IF NOT EXISTS `reservations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `vol_initiation` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cours_pilotage` text COLLATE utf8mb4_general_ci NOT NULL,
+  `balade_aerienne` text COLLATE utf8mb4_general_ci NOT NULL,
+  `formation_pilote` text COLLATE utf8mb4_general_ci NOT NULL,
+  `date_reservation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 

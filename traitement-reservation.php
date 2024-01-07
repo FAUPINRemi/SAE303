@@ -60,6 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date_reservation = $_POST["dateDebut"];
 
     // Insertion des données dans la table 'reservations'
+
+    
     try {
         $sql = "INSERT INTO $table_name  (nom, email, vol_initiation, cours_pilotage, balade_aerienne, formation_pilote, date_reservation) VALUES (:nom, :email, :vol_initiation, :cours_pilotage, :balade_aerienne, :formation_pilote, :date_reservation)";
         $stmt = $conn->prepare($sql);
