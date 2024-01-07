@@ -37,7 +37,7 @@ if(!isset($_SESSION['user_email'])) {
                 <a class="nav-link text-white text-reset" aria-current="page" href="#sectioninfo">Informations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white text-reset" href="connexion.php">Réserver</a>
+                <a class="nav-link text-white text-reset" href="reservation.php">Réserver</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white text-reset" href="#footer">Contact</a>
