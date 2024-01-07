@@ -58,24 +58,27 @@
         <label>Activités :</label>
         </br>
 
-        <input type="checkbox" id="vol_initiation" name="activites[]" value="vol_initiation" class="form-check-input">
+        <input type="checkbox" id="vol_initiation" name="vol_initiation[]" value="Vol initiation " class="form-check-input">
         <label for="vol_initiation">Vol d'initiation</label>
         </br>
 
          
-        <input type="checkbox" id="cours_pilotage" name="activites[]" value="cours_pilotage"  class="form-check-input">
+        <input type="checkbox" id="cours_pilotage" name="cours_pilotage[]" value="Cours pilotage "  class="form-check-input">
         <label for="cours_pilotage">Cours de pilotage</label>
         </br>
         
         
 
-        <input type="checkbox" id="balade_aerienne" name="activites[]" value="balade_aerienne" class="form-check-input">
+        <input type="checkbox" id="balade_aerienne" name="balade_aerienne[]" value="Balade aerienne " class="form-check-input">
         <label for="balade_aerienne">Balade aérienne</label>
-        </br>
+        </br> 
 
-        <input class="mb-5 form-check-input" type="checkbox" id="formation_pilote" name="activites[]" value="formation_pilote" >
+        <input class="mb-5 form-check-input" type="checkbox" id="formation_pilote" name="formation_pilote[]" value="Formation pilote " >
         <label for="formation_pilote">Formation de pilote</label>
         
+        <label for="dateDebut" id="dateDebutLabel" class="  ">Date:</label>
+        <input type="date" id="dateDebut" name="dateDebut" class="form-control mb-5 "><br>
+
         <div class="text-center mb-5">
             <button type="submit" class="btn btn-light mb-1 mx-auto">Réserver</button>
         </div>

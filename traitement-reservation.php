@@ -14,7 +14,7 @@
     <div class="formulaire col-md-3 mt-5 mx-auto  text-white p-5">
         Merci d'avoir réservé, un récapitulatif vous a été envoyé par mail.
     </div>
-<div class="mx-auto text-center">
+<div class="mx-auto text-center"> 
     <a href="indexconnecte.php"><button class="btn btn-outline-light mx-auto">Retour à la page d'accueil</button></a>
     </div>
 </body>
@@ -44,10 +44,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     // Vérifier si des activités sont cochées
-    $vol_initiation = isset($_POST["vol_initiation"]) ? 1 : 0;
-    $cours_pilotage = isset($_POST["cours_pilotage"]) ? 1 : 0;
-    $balade_aerienne = isset($_POST["balade_aerienne"]) ? 1 : 0;
-    $formation_pilote = isset($_POST["formation_pilote"]) ? 1 : 0;
+    $vol_initiation = isset($_POST["vol_initiation"]) ? (array)$_POST["vol_initiation"] : [] ;
+    $cours_pilotage = isset($_POST["cours_pilotage"]) ? (array)$_POST["cours_pilotage"] : [] ;
+    $balade_aerienne = isset($_POST["balade_aerienne"]) ? (array)$_POST["balade_aerienne"] : [] ;
+    $formation_pilote = isset($_POST["formation_pilote"]) ? (array)$_POST["formation_pilote"] : [] ;
+
+    $vol_initiation_str = implode(",", $vol_initiation);
+    $cours_pilotage_str = implode(",", $cours_pilotage);
+    $balade_aerienne_str = implode(",", $balade_aerienne);
+    $formation_pilote_str = implode(",", $formation_pilote);
+
+    
 
     // Date de réservation (à adapter selon votre formulaire)
     $date_reservation = $_POST["dateDebut"];
@@ -58,10 +65,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':vol_initiation', $vol_initiation);
-        $stmt->bindParam(':cours_pilotage', $cours_pilotage);
-        $stmt->bindParam(':balade_aerienne', $balade_aerienne);
-        $stmt->bindParam(':formation_pilote', $formation_pilote);
+        $stmt->bindParam(':vol_initiation', $vol_initiation_str);
+        $stmt->bindParam(':cours_pilotage', $cours_pilotage_str);
+        $stmt->bindParam(':balade_aerienne', $balade_aerienne_str);
+        $stmt->bindParam(':formation_pilote', $formation_pilote_str);
         $stmt->bindParam(':date_reservation', $date_reservation);
         $stmt->execute();
 

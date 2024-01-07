@@ -16,7 +16,7 @@
     
 </body>
 </html>
-
+ 
 
 
 <div class="reservation">
@@ -52,6 +52,10 @@ try {
             echo "<td>" . $row['nom'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['date_reservation'] . "</td>";
+            echo "<td>" . $row['vol_initiation'] . "</td>";
+            echo "<td>" . $row['cours_pilotage'] . "</td>";
+            echo "<td>" . $row['balade_aerienne'] . "</td>";
+            echo "<td>" . $row['formation_pilote'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
