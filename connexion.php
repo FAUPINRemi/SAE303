@@ -20,20 +20,21 @@ if (isset($_POST['valider'])) {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-      
-        if ($user) {
-            if ($email === 'acf2l.admin@gmail.com' && $password === 'adminacf2l@@') {
-                header("Location: indexadmin.php");
-                exit();
-            } else {
-                header("Location: indexconnecte.php");
-                exit();
-            }
+        if ($email === 'acf2l.admin@gmail.com' && password_verify($password, $user['password'])) {
+            session_start();
+            $_SESSION['user_email'] = $email;
+
+            header("Location: indexadmin.php");
+            exit();
         } else {
-            echo '<script>showPopup("Le compte n\'existe pas.");</script>';
+            header("Location: indexconnecte.php");
+            exit();
         }
     }
 }
+
+$conn->close();
+?>
 
 $conn->close();
 ?>
@@ -101,26 +102,9 @@ $conn->close();
                 <input type="submit" class="btn btn-light mt-5 mx-auto " name="valider" value="valider"> 
             </div>
                 
-            <div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <p id="popup-message"></p>
-    </div>
-</div>
+            
         </form>
 
-        
-
-        <script>
-    function showPopup(message) {
-        document.getElementById('popup-message').innerHTML = message;
-        document.getElementById('popup').style.display = 'block';
-    }
-
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
-</script>
     </div>
 </body>
 </html>
