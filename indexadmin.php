@@ -1,17 +1,11 @@
 
 <?php
-
 session_start();
 
-
-    
-
-if(!isset($_SESSION['user_email'])) {
+if (!isset($_SESSION['user_email'])) {
     header("Location: connexion.php");
     exit();
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">

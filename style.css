@@ -18,3 +18,33 @@ backdrop-filter: blur(15.1px);
 border: 0.5px solid rgba(0, 0, 0, 0.4);
 }
 
+
+    #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    #popup .popup-content {
+        text-align: center;
+    }
+
+    #popup .close {
+        color: #aaa;
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #popup .close:hover {
+        color: black;
+    }
+
+
