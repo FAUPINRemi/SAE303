@@ -61,7 +61,7 @@
             <img style="filter: brightness(65%);" src="./ACF2L/images/slide-3.jpg" class="d-block w-100" alt="Slide3">
             <div class="carousel-caption position-absolute top-50 start-50 translate-middle text-center w-100">
                 <h1>Venez piloter un ULM !<br></h1>
-                <a href="connextion.php"><button class="btn btn-outline-light">Réserver maintenant !</button></a>
+                <a href="connexion.php"><button class="btn btn-outline-light">Réserver maintenant !</button></a>
             </div>
         </div>
     </div>
