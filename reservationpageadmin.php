@@ -77,17 +77,17 @@ try {
         // Afficher les données (vous pouvez personnaliser cette partie selon vos besoins)
         
         echo "<table class='formulaire col-md-3 mt-5 mx-auto text-white border-0 mt-4' ";
-        echo "<tr><th>ID</th><th>Nom</th><th>Email</th></tr>";
+        echo "<tr><th>ID</th><th>Nom</th><th>Email</th><th>Vol_Ini</th><th>Cours_pilot</th><th>Balade</th><th>Formation_pilote</th><th>Date_reserv</th></tr>";
         foreach ($rows as $row) {
             echo "<tr class='mx-auto w-50'>";
-            echo "<td class='p-3'> " . $row['id'] . "</td>";
-            echo "<td class='p-3'>" . $row['nom'] . "</td>";
-            echo "<td class='p-3'>" . $row['email'] . "</td>";
-            echo "<td class='p-3'>" . $row['vol_initiation'] . "</td>";
-            echo "<td class='p-3'>" . $row['cours_pilotage'] . "</td>";
-            echo "<td class='p-3'>" . $row['balade_aerienne'] . "</td>";
-            echo "<td class='p-3'>" . $row['formation_pilote'] . "</td>";
-            echo "<td class='p-3'>" . $row['date_reservation'] . "</td>";
+            echo "<td class='p-5'> " . $row['id'] . "</td>";
+            echo "<td class='p-5'>" . $row['nom'] . "</td>";
+            echo "<td class='p-5'>" . $row['email'] . "</td>";
+            echo "<td class='p-5'>" . $row['vol_initiation'] . "</td>";
+            echo "<td class='p-5'>" . $row['cours_pilotage'] . "</td>";
+            echo "<td class='p-5'>" . $row['balade_aerienne'] . "</td>";
+            echo "<td class='p-5'>" . $row['formation_pilote'] . "</td>";
+            echo "<td class='p-5'>" . $row['date_reservation'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
