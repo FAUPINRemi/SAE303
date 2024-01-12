@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./ACF2L/images/logoaf2l.png">
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style2.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>Réservation ULM</title>
@@ -42,7 +43,7 @@
         </ul>
     </div>
 </nav>
-  <div class="formulaire col-md-3 mt-5 mx-auto  text-white">
+  <div class="formulaire col-md-3 mx-auto mb-5  text-white " style="margin-top:150px;">
   <form action="traitement-reservation.php" class=" col-md-6 mx-auto mt-4 mb-4" method="post">
   <h2 class="text-center mb-4">Réservation</h2>
 
@@ -82,12 +83,19 @@
         <div class="text-center mb-5">
             <button type="submit" class="btn btn-light mb-1 mx-auto">Réserver</button>
         </div>
+
+        
         
     </fieldset>
 
   </form>
   </div>
-  
+  <div class=" formulaire  col-md-5 mt-5 mx-auto p-2 mb-5 " >
+        <p class="w-75 text-white text-center mx-auto">Veuillez à faire vos réservation de vol en fonction de la météo. <br>Un ciel éclaircie est à privilégier pour le vol. </p>
+        <iframe style="margin: top 50px" id="widget_autocomplete_preview"  class="w-50 h-50 mx-auto  "  frameborder="0" src="https://meteofrance.com/widget/prevision/772840"></iframe>
+        
+  </div>
+ 
 
 </body>
 </html>
