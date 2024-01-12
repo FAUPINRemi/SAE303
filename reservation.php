@@ -43,7 +43,7 @@
         </ul>
     </div>
 </nav>
-  <div class="formulaire col-md-3 mx-auto mb-5  text-white " style="margin-top:150px;">
+  <div class="formulaire col-md-4 mx-auto mb-5  text-white " style="margin-top:150px;">
   <form action="traitement-reservation.php" class=" col-md-6 mx-auto mt-4 mb-4" method="post">
   <h2 class="text-center mb-4">Réservation</h2>
 
@@ -74,8 +74,10 @@
         <label for="balade_aerienne">Balade aérienne</label>
         </br> 
 
-        <input class="mb-5 form-check-input" type="checkbox" id="formation_pilote" name="formation_pilote[]" value="Formation pilote " >
+        <input class="form-check-input" type="checkbox" id="formation_pilote" name="formation_pilote[]" value="Formation pilote " >
         <label for="formation_pilote">Formation de pilote</label>
+        </br>
+        </br>
         
         <label for="dateDebut" id="dateDebutLabel" class="  ">Date:</label>
         <input type="date" id="dateDebut" name="dateDebut" class="form-control mb-5 "><br>
