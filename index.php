@@ -10,6 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+    
+<div id="video-container">
+      <video class="w-100" id="fullscreen-video" autoPlay muted loop>
+          <source src="./ACF2L/images/ACF2L_loader.mp4" type="video/mp4"></source>
+          Your browser does not support the video tag.
+      </video>
+  </div>
 <nav class="navbar fixed-top navbar-expand-lg bg-dark bg-opacity-25 text-white">
     <a class="navbar-brand" href="index.php"><img style="width: 100px; height: 100px;" src="./ACF2L/images/logoaf2l.png" alt="logoaf2l"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -357,5 +364,41 @@ Pour les moins de 25ans il y a une remise de 20%</p>
             </div>
         </div>
     </footer>
+    <script>
+
+    var tempsAvantMasquage = 5000; 
+    var tempsDeMasquageProgressif = 3000; 
+    var videoContainer = document.getElementById('video-container');
+    var fullscreenVideo = document.getElementById('fullscreen-video');
+    var startTime;
+
+    
+    function masquerVideo(timestamp) {
+        if (!startTime) {
+            startTime = timestamp;
+        }
+
+        var progress = timestamp - startTime;
+        var opacity = 1 - Math.min(progress / tempsDeMasquageProgressif, 1);
+
+        fullscreenVideo.style.opacity = opacity;
+
+        if (progress < tempsDeMasquageProgressif) {
+            requestAnimationFrame(masquerVideo);
+        } else {
+            videoContainer.style.display = 'none';
+        }
+    }
+
+
+    videoContainer.style.display = 'block';
+    videoContainer.style.zIndex = '5'; 
+
+    setTimeout(function () {
+        requestAnimationFrame(masquerVideo);
+    }, tempsAvantMasquage);
+</script>
+
+</script>
 </body>
 </html>

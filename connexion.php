@@ -30,9 +30,7 @@ if (isset($_POST['valider'])) {
             header("Location: indexconnecte.php");
             exit();
         }
-    } else {
-        echo '<script>window.alert("Le compte n\'existe pas.");</script>';
-    }
+    } 
 }
 
 $conn->close();
