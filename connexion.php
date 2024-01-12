@@ -30,9 +30,7 @@ if (isset($_POST['valider'])) {
             header("Location: indexconnecte.php");
             exit();
         }
-    } else {
-        echo '<script>window.alert("Le compte n\'existe pas.");</script>';
-    }
+    } 
 }
 
 $conn->close();
@@ -81,7 +79,7 @@ $conn->close();
                     <li><a class="dropdown-item text-white text-reset" href="connexion.php">Se connecter</a></li>
                     <li><a class="dropdown-item text-white text-reset" href="inscription.php">S'inscrire</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-white text-reset" href="#">Admin réservations</a></li>
+                    
                 </ul>
             </div>
         </ul>
@@ -100,7 +98,7 @@ $conn->close();
             <label for="Cookie">Souhaitez-vous l'utilisation de cookies?  </label>
             <br>
             <div class="text-center mb-5">
-                <input type="submit" class="btn btn-light mt-5 mx-auto " name="valider" value="valider" onclick="window.alert('Le compte n\'existe pas.');"> 
+                <input type="submit" class="btn btn-light mt-5 mx-auto " name="valider" value="valider" > 
             </div>
                 
             
