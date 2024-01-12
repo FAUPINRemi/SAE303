@@ -79,4 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erreur lors de l'insertion dans la base de données : " . $e->getMessage();
     }
 }
+
+
+
 ?>
