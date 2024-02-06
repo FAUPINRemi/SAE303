@@ -1,3 +1,182 @@
+Projet de fin de semestre 3 BUT MMI :
+
+Consigne : Le visuel actuel du site vitrine nécessite un rafraîchissement. 
+En utilisant le framework Bootstrap, proposer des améliorations nécessaires pour rendre le site plus 
+compétitif. 
+
+
+1. Mise en situation 
+M. Adit, président du  Club ACF2L, vous a demandé de créer un site internet de présentation des activités 
+de l’association. M. Jacques Adit, content de votre prestation, vous demande de réfléchir à la mise en 
+place d’une part d’un formulaire d’inscription de ses adhérents et d’autre part un formulaire de 
+réservation pour pouvoir organiser les plannings. 
+
+2. Travail à faire en équipe 
+Le traitement d'un formulaire nécessite l'utilisation du langage PHP et donc d'un serveur web. 
+Sites pouvant vous donner des informations : 
+https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3 
+https://bootstrap-top-design.com/bootstrap-datepicker-tutoriel/ 
+
+
+
+Etape 1 → installation du serveur web  
+Vous utiliserez pour le serveur Web, la suite XAMPP, intégrant un serveur web et un serveur de bases 
+de données (MySQL). 
+Cet outil sera utilisé indépendamment de la plateforme (Windows, Linux, Mac). 
+
+
+
+Etape 2 → Récupération des données des adhérents via un formulaire. 
+Actuellement, les adhérents remplissent une fiche d’information qui est ensuite saisie par la secrétaire 
+dans un tableur.   
+
+En ce qui concerne les activités de formation de pilote et de baptême de l’air et de réparation, les 
+informations sont inscrites sur un grand planning accroché au mur. 
+Les membres du bureau de l’association ont validé la proposition d’améliorer cette gestion via des 
+formulaires mais se posent des questions sur la protection des données à caractère personnel. 
+2.1 : Enregistrement des données dans un endroit spécifique ? 
+2.2 : Droit des utilisateurs ? obligation incombant au responsable du traitement 
+2.3 : Proposer une durée de conservation des données 
+2.4 : Indiquer dans quel document exigé par le RGPD cette durée doit être consignée 
+2.5 : Préciser quelles données mises dans la fiche d’information ne seront pas retenues pour la 
+création du formulaire car non pertinentes ou qui porteraient atteinte à la vie privée au regard du 
+RGPD. 
+
+2.6: Sur une page HTML reliée à votre site (prévoir éventuellement la page dans le menu), créer le 
+formulaire reprenant la fiche d’information. (la présentation est à votre choix, en CSS bien sûr).  
+
+Fiche d’informations : 
+1. civilité (sous forme de bouton radio) 
+2. nom 
+3. prénom 
+4. date de naissance (différentes méthodes à votre choix) 
+5. Adresse : à décomposer en Numéro et rue, code Postal (sous forme de liste déroulante) et 
+ville. 
+6. Votre situation familiale (célibataire, marié, Union Libre, PACS, divorcé) avec la date de 
+début ou la date de fin 
+7. email 
+8. Téléphone portable 
+9. Nombre de personnes à charge : enfants mineurs (nombre), enfants majeurs (nombre), 
+Parents à charge et la cause du handicap. 
+10. Les activités susceptibles d’être demandées (choix multiple). 
+Ainsi, une personne peut vouloir prendre à la fois des cours de pilotage et faire un baptême de l’air par exemple. 
+
+
+
+Etape 3 → test du formulaire 
+Créez une nouvelle page sur le site pour l'affichage des champs saisis. 
+Ces éléments permettent de définir le fichier de destination des données et la méthode utilisée pour 
+transmettre les données saisies dans le formulaire. 
+
+
+
+Etape 4 → finalisation du formulaire 
+Nous allons ajouter des contrôles sur la saisie du formulaire. Ces contrôles peuvent être faits du côté 
+client et/ou du côté serveur. (Pensez à regarder du côté de html5 ou javascript) 
+
+
+1. Les champs « nom, prénom, email » doivent être obligatoirement remplis. (mettre un astérisque 
+et une indication sur la page formulaire)  et tester. 
+
+2. Vérifications 
+
+1. le champ numéro du portable 
+
+2. vérifier la validité de l'adresse mail 
+
+1. Dans la majorité des cas, les données sont ensuite inscrites dans une base de données. Mais avant 
+cela, elles devront passer dans des filtres, afin de limiter au maximum les soumissions indélicates 
+(il est temps de vous sensibiliser aux concepts de « injection HTML/JavaScript » et « injection 
+SQL ») 
+
+1. Définir ce que sont ces injections 
+2. Que faire pour les éviter ? 
+
+
+
+Etape 5 → création de la base de données 
+Les informations récupérées à partir du formulaire vont être stockées dans une base de données. On 
+prend comme hypothèse que la base de données est de type Relationnel, pilotable par SQL. 
+(on utilisera MySQL comme système de gestion de bases de données relationnelles - SGBDR) : 
+
+1. Créer votre base de données : son nom doit correspondre aux initiales de vos noms suivi de « 
+ACF2L » 
+
+2. Créer la table adhérent : son nom doit correspondre aux initiales de vos noms suivi de « 
+adherent » 
+
+3. Testez / Mettez au point un ordre SQL d'insertion (en ligne de commande ou avec un assistant 
+graphique) 
+
+4. Concevoir un script cible du formulaire, filtrer les données reçues et, le cas échéant, faites 
+exécuter l'ordre d'insertion (testé à l'étape précédente) dans la base des données (INSERT…), 
+sinon retourner le formulaire en signalant les erreurs (si ce n'est pas encore fait, le formulaire de 
+contact devra donc passer en php) 
+
+5. En réponse, vous répondrez par un ordre de redirection (côté client) vers une page de 
+remerciement. En faisant apparaître les données saisies et le numéro de l’adhérent. (Remplacer la 
+page correspondant à l’étape 3). 
+suite sous réserve de modification 
+
+Etape 6 → La gestion des réservations des baptêmes de l’air 
+Pour une meilleure communication et faciliter l’activité « baptême de l’air », le bureau de l’association 
+aimerait avoir la possibilité de gérer automatiquement les réservations. 
+Actuellement la secrétaire utilise un tableur pour gérer les réservations. Elle voudrait basculer sur une 
+application informatique. Il faut être adhérent pour des questions d’assurance. 
+Un formulaire est fait par le client qui indique sur quel type d’appareil il veut faire son vol et les dates 
+possibles. La secrétaire va rechercher son Numéro d’adhérent et va à partir d’un formulaire, en partie 
+back-office (page cachée dans le site), saisir la réservation avec quel pilote et quel vol et quelle date. 
+1. Établir un diagramme des différentes entités (vous pouvez utiliser DIA ou WORKBENCH ou 
+phpmyadmin). Il va être utile de créer les tables pilotes, avions, réservations en plus de la table 
+adhérent. 
+2. Concevez puis exécutez un script SQL de création de ces tables (ligne de commande ou 
+phpMyAdmin) 
+3. Testez / Mettez au point un ordre SQL d'insertion (en ligne de commande ou avec un assistant 
+graphique) 
+4. En réponse, vous répondrez par un ordre de redirection (côté client) vers une page de 
+d’information (page de test) puis à la place par un mail. 
+5. Pour les plus rapides vous pourrez réfléchir, sur l’insertion de l’ensemble des données dans les 
+différentes tables sans que la secrétaire entre le numéro d’adhérent. 
+Etape 7 →exploitation de la base de données 
+Vous devez maintenant réfléchir aux utilisations qui pourront être faites de la base de données. 
+Dans un premier temps, vous devrez construire un tableau qui affichera les données essentielles qui ont 
+été insérées dans la base. (Il faudra utiliser PHP et html pour obtenir un tableau de synthèse.) 
+Vous devrez également proposer au minimum 3 requêtes permettant de faire des tris ou de mettre en 
+place des filtres permettant une meilleure exploitation de cette base, en listant et en comptant les 
+adhérents qui se sont pré-inscrits / discipline ou activité.
+
+
+
+Partie 2 : utilisation d’un template 
+Un Template, connu également sous le terme de modèle, layout ou Gabarit en français, représente 
+l’ensemble des éléments graphiques de l’agencement des colonnes, passant par le choix des couleurs 
+jusqu’à l’établissement de la structure des différents éléments enveloppant un site Internet, abstraction 
+faite de son contenu. 
+Mise à votre disposition 
+Le fichier ACF2L.zip contient le site actualisé. (A installer sur votre disque dur). 
+
+Il a été créé à partir du template : https://awaikenthemes.com/template/kindergarten-child-care-html
+template/ 
+(utilisation de Bootstrap). (template gratuit bien évidemment). 
+Contenu 
+Le template a été optimisé pour la lecture sur smartphone, c’est pourquoi : 
+➢ Il n’y a qu’une seule page => index.html 
+➢ le menu de navigation correspond à des « ancres » pour retrouver plus rapidement la rubrique sans 
+faire défiler toute la page. 
+➢  Pour réaliser la présentation, Boostrap utilise plusieurs feuilles de style. 
+➢ Le dossier ‘fonts’ : ajout de polices de caractères qui n’existe pas nativement. 
+➢ Vous pouvez ajouter des images dans le dossier ‘images. 
+Travail à réaliser 
+Afin de finaliser le site statique, M. Adit aimerait apporter entre autres, les modifications suivantes : 
+➢ Créer un logo et remplacer celui qui est mis sur le site. 
+➢ Rubrique : « nos activités » : Modifier les 3 paragraphes « Best qualite food », « Music lesson » et 
+« Bus service »  en correspondance avec les prestations complémentaires décrites au-dessus. 
+➢ Rubrique : « catégories d’ULM » : afficher les 3 catégories d’ULM utilisés par l’association. 
+➢ Rubrique : « Review » modifier l’onglet de navigation et cette rubrique pour la transformer en tarifs. 
+( Vous devez le faire sous forme de tableau). Des exemples de tarif sont dans le dossier « images » 
+➢ pour être en conformité avec les lois du RGPD, Installer un popup de consentement des cookies 
+➢ Installer un widget de météo très important pour la sécurité des pilotes
+
 
 mail d'envoie de recapitulatif
 acfl52995@gmail.com
